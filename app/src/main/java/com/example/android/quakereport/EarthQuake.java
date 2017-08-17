@@ -1,5 +1,10 @@
 package com.example.android.quakereport;
 
+import java.text.SimpleDateFormat;
+
+import static com.example.android.quakereport.R.id.date;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 /**
  * Created by Ramachari on 11-08-2017.
  */
@@ -11,26 +16,27 @@ public class EarthQuake {
     //location of the earth quake//
     private String mLocation;
 
-    //date of the earthquake//
-    private String mDate;
 
+    private long mTimeInMilliseconds;
 
-    public EarthQuake(String magnitude,String location,String date){
-        mMagnitude=magnitude;
-        mLocation=location;
-        mDate=date;
+    public EarthQuake(String magnitude, String location, long timeInMilliseconds) {
+        mMagnitude = magnitude;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
-    public String getMagnitude(){
+    public String getMagnitude() {
         return mMagnitude;
 
     }
-    public String getLocation(){
+
+    public String getLocation() {
         return mLocation;
 
     }
-    public String getDate(){
-        return mDate;
+
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
 
     }
 }
